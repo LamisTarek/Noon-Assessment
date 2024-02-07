@@ -1,0 +1,138 @@
+.posts-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .post-card {
+    width: 300px;
+    border-bottom: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    height: 100%;
+    margin: 20px 0;
+    position: relative;
+
+    @media screen and (max-width: 768px) {
+      width: 90%;
+    }
+
+    img {
+      width: 100%;
+      height: 400px;
+      object-fit: fill;
+
+      @media screen and (max-width: 768px) {
+        height: 200px;
+      }
+    }
+
+    .post-image-wrapper {
+      position: relative;
+    }
+
+    .post-overlay {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      color: #fff;
+      padding: 8px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(
+        0,
+        0,
+        0,
+        0.2
+      ); /* Adjust the opacity value here (0.5 for 50% opacity) */
+      h4 {
+        margin-top: 5px;
+      }
+    }
+    .heart-icon {
+      color: rgb(84, 93, 228);
+      position: absolute;
+      right: 10px;
+      bottom: 25px;
+      cursor: pointer;
+      margin-right: 10px;
+      svg {
+        width: 25px;
+        height: 25px;
+      }
+    }
+
+    .post-details {
+      padding: 10px;
+      h3 {
+        margin: 0;
+      }
+    }
+
+    .actions {
+      color: #045cc0;
+
+      span {
+        font-size: 13px;
+        margin-top: 2px;
+      }
+    }
+
+    .post-details {
+      p {
+        margin: 8px 0;
+        font-size: 14px;
+        color: #3a1111;
+        letter-spacing: 0.5px;
+      }
+    }
+
+    .hashtags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+
+      .hashtag {
+        color: #0070f3;
+        cursor: pointer;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+      }
+    }
+    .comments-section {
+      margin-top: 10px;
+      color: rgb(150, 149, 149);
+      cursor: pointer;
+      span {
+        font-size: 13px;
+        margin-top: 2px;
+      }
+    }
+    /* New styles for user information */
+    .post-user {
+      display: flex;
+      flex-direction: row;
+      color: #3a1111;
+      gap: 8px;
+      padding: 8px 0;
+    }
+
+    .post-user img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 5px solid #8456d4;
+    }
+
+    .post-user span {
+      font-weight: bold;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+  }
+}
